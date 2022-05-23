@@ -1,0 +1,27 @@
+  <div class='country__wrapper'>
+    <div class='country__header'>
+      <img
+        class='country__flag'
+        src='{{flags.svg}}'
+        alt='{{name.official}}'
+        width='60'
+      />
+      <h2 class='country__name'>{{name}}</h2>
+    </div>
+
+    <div class='country__info'>
+      <p><b>Capital:</b> {{capital}} </p>
+      <p><b>Population:</b> {{population}} </p>
+      <p><b>Languages:</b>
+        {{#each this.languages}}
+        </span>{{name}}<span></span>
+      {{/each}}
+      </p>
+    </div>
+  </div>
+  <style>
+    .country__header{display: flex; align-items: center;}
+    .country__name{
+      font-size: 30px;
+    }
+  </style>
